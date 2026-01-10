@@ -135,6 +135,10 @@ h1 {
   cursor: pointer;
 }
 
+.courses button:hover {
+  background-color: deepskyblue;
+}
+
 .crsList {
   display: grid;
   grid-template-columns: 1fr;
