@@ -1,0 +1,249 @@
+/* -------------- COLOR SCHEME ---------------
+terra cotta #E07A5F
+deep slate blue #3D405B, 
+Light Grey #f5f5f7 
+Medium Grey #d2d2d2
+Dark Grey #323232  */
+
+
+* {
+  font-family: "Libre Baskerville", sans-serif;
+  box-sizing: border-box;
+}
+
+/************************** HEADER **************************/
+header {
+  padding: 10px 0 10px 10px;
+  display: grid;
+  grid-template-columns: 24px auto 44px;
+  column-gap: 10px;
+  align-items: end;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-bottom: 3px;
+}
+
+header span {
+  font-size: 1.3rem;
+  color: #323232;
+}
+
+/************************** NAVIGATION **************************/
+nav {
+  background-color: #000000;
+  display: none;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  font-size: .9rem;
+  font-weight: 300;
+  color: #ffffff;
+  text-decoration: none;
+  padding: .8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+nav a:hover {
+  color: deepskyblue;
+}
+
+nav li.active a {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+nav.show {
+  display: block;
+}
+
+/************************** HAMBURGER NAVIGATION **************************/
+.hamburger {
+  background: none;
+  border: none;
+  color: #323232;
+  cursor: pointer;
+  font-family: Verdana;
+  font-size: 2rem;
+}
+
+.hamburger::before {
+  content: "\2630";
+}
+
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+/************************** MAIN LAYOUT **************************/
+h1 {
+  font-size: 1.5rem;
+  color: #3D405B;
+  font-weight: 500;
+  margin-left: 10px;
+  text-align: center;
+}
+
+/************************** CARD LAYOUT **************************/
+.card {
+  border: #eee;
+  border-radius: 15px;
+  box-shadow: 0 0 10px deepskyblue;
+  margin: .5rem 10px;
+  overflow: hidden;
+}
+
+.card h2 {
+  background-color: #000000;
+  color: #f5f5f7;
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: .5rem .2rem;
+  text-align: center;
+}
+
+.card p {
+  font-weight: 200;
+  margin: 10px;
+  line-height: 130%;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+.courses div {
+  text-align: center;
+}
+
+.courses button {
+  padding: .75rem;
+  margin: .5rem;
+  border: 2px solid lightskyblue;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.crsList {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.crsList div {
+  padding: .75rem;
+  margin: .5rem;
+  border: 2px solid grey;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/************************** DISPLAY COURSES **************************/
+/*https://www.toptal.com/designers/htmlarrows/symbols/check-mark */
+.needed {
+  background-color: lightblue;
+}
+
+.complete {
+  background-color: lightgreen;
+}
+
+.complete::before {
+  content: "\2713  "
+}
+
+.courses p {
+  text-align: center;
+}
+
+/************************** MODAL DIALOG STYLING **************************/
+dialog {
+  color: #000000;
+  border: 10px solid rgba(0, 0, 0, 0.1);
+  border-radius: .50rem;
+  padding: 1rem;
+  background-color: #fff;
+  width: 90%;
+  max-width: 600px;
+}
+
+dialog h2 {
+  color: #000000;
+}
+
+dialog h3 {
+  color: navy;
+}
+
+dialog p {
+  font-weight: 300;
+}
+
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/************************** SOCIAL MEDIA **************************/
+.social {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.social a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+.social img {
+  width: 22px;
+  height: 22px;
+}
+
+.social a:hover {
+  background-color: deepskyblue;
+}
+
+/************************** FOOTER **************************/
+footer {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+footer p {
+  margin: .25rem;
+  font-size: .9rem;
+  font-weight: 300;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 231 for Gaweth Thalon</title>
+  <meta name="description"
+    content="This site contains my sample assignments written by Gaweth Thalon for WDD231 at BYUI Pathways">
+  <meta name="author" content="Gaweth Thalon">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+
+  <!-- Style Links -->
+  <link href="styles/normalize.css" rel="stylesheet">
+  <link href="styles/base.css" rel="stylesheet">
+  <link href="styles/larger.css" rel="stylesheet">
+
+  <!-- Google Font Links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Playwrite+US+Modern:wght@100..400&display=swap"
+    rel="stylesheet">
+  <!-- Script Links -->
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/getcourses.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/modal.js" defer></script>
+
+
+
+</head>
+
+<body>
+  <header>
+    <img src="images/flamme.svg" alt="Gaweth Thalon Site Logo" width="1" height="1" loading="lazy">
+    <span>Gaweth Thalon</span>
+    <button id="hamburger" class="hamburger" aria-label="navigation links"></button>
+  </header>
+  <nav id="navbar">
+    <ul>
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="chamber">Chamber Assignment</a></li>
+      <li><a href="final/index.html">Final Project</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+    <div class="sbs">
+      <section class="card">
+        <h2>About Me</h2>
+        <p>I'm Gaweth Thalon, a 21-year-old from Haiti currently studying Software Development at BYU-Pathway. I’m
+          passionate about technology and solving problems through code, but I also value my faith and serving others.
+          I'm someone who works hard, stays positive, and believes in constant growth, both in my career and my personal
+          life.</p>
+      </section>
+      <section class="card">
+        <h2>Mug Shot</h2>
+        <img src="images/mugshot.webp" width="250" height="250" alt="Gaweth" loading="lazy">
+      </section>
+    </div>
+    <section class="card courses">
+      <h2>Web and Computer Programming Certificate</h2>
+      <div>
+        <button id="all">All Courses</button>
+        <button id="wdd">WDD Courses</button>
+        <button id="cse">CSE Courses</button>
+      </div>
+
+      <div id="crsList" class="crsList"></div>
+      <p id="totalCredits"></p>
+    </section>
+    <dialog id="course-details"></dialog>
+  </main>
+  <footer>
+    <div class="social">
+      <a href="#" target="_blank"><img src="./images/flamme.svg" alt="Facebook Icon"></a>
+      <a href="#" target="_blank"><img src="./images/flamme.svg" alt="GitHub Icon"></a>
+      <a href="#" target="_blank"><img src="./images/flamme.svg" alt="Linked In Icon"></a>
+      <a href="#" target="_blank"><img src="./images/flamme.svg" alt="Whats App Icon"></a>
+    </div>
+    <p>&copy; <span id="currentyear"></span> • Gaweth Thalon • Port-au-Prince, Haïti</p>
+    <p id="lastModified"></p>
+  </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+@media only screen and (min-width: 38rem) {
+
+  header,
+  main,
+  nav,
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  header {
+    grid-template-columns: 24px auto;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+
+  nav a {
+    border: none;
+    padding: .5rem 1.5rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  nav li:last-child a {
+    border: none;
+  }
+
+  .sbs {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .crsList {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  h1 {
+    text-align: left;
+  }
+}
+
+/* end media query */
