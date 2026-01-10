@@ -95,7 +95,7 @@ h1 {
   border: #eee;
   border-radius: 15px;
   box-shadow: 0 0 10px deepskyblue;
-  margin: .5rem 10px;
+  margin: .6rem 10px;
   overflow: hidden;
 }
 
@@ -105,7 +105,7 @@ h1 {
   font-weight: 400;
   font-size: 1.25rem;
   margin: 0;
-  padding: .5rem .2rem;
+  padding: 1rem 1rem;
   text-align: center;
 }
 
@@ -128,7 +128,7 @@ h1 {
 }
 
 .courses button {
-  padding: .75rem;
+  padding: 1rem;
   margin: .5rem;
   border: 2px solid lightskyblue;
   border-radius: 15px;
@@ -141,7 +141,7 @@ h1 {
 }
 
 .crsList div {
-  padding: .75rem;
+  padding: 1rem;
   margin: .5rem;
   border: 2px solid grey;
   border-radius: 10px;
