@@ -1,0 +1,130 @@
+body {
+  background-color: #f0f0f0;
+  font-family: 'Courier New', Courier, monospace;
+  /* Police style machine à écrire */
+  font-size: 12px;
+  color: #333;
+}
+
+.voucher-container {
+  width: 210mm;
+  /* Largeur A4 */
+  min-height: 297mm;
+  background-color: white;
+  margin: 20px auto;
+  padding: 20mm 15mm;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.header-section {
+  position: relative;
+  height: 250px;
+  padding-top: 20px;
+}
+
+.date-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.amount-words {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+}
+
+.amount-numeric {
+  position: absolute;
+  top: 60px;
+  right: 50px;
+  font-weight: bold;
+}
+
+.recipient-info {
+  position: absolute;
+  top: 110px;
+  left: 80px;
+  line-height: 1.4;
+}
+
+.memo-line {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+
+.perforation {
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin: 40px 0;
+}
+
+/* Tableaux et détails */
+.details-section {
+  margin-bottom: 50px;
+}
+
+.recipient-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.date-right {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.details-table th {
+  text-align: left;
+  font-weight: normal;
+  padding: 5px 0;
+}
+
+.details-table td {
+  padding: 5px 0;
+}
+
+.cheque-amount-line {
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+.footer-line {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.total-bold {
+  font-weight: bold;
+}
+
+.signature-area {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Pour l'impression */
+@media print {
+  body {
+    background-color: white;
+  }
+
+  .voucher-container {
+    margin: 0;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .invoice-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .invoice-table th,
+    .invoice-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .invoice-table th {
+      background-color: #f2f2f2;
+    }
+
+    .total-row {
+      font-weight: bold;
+      background-color: #e8f4ff;
+    }
+  </style>
+</head>
+
+<body>
+  <table class="invoice-table">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Quantité</th>
+        <th>Prix unitaire</th>
+        <th>Total HT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Produit A</td>
+        <td>2</td>
+        <td>50,00 €</td>
+        <td>100,00 €</td>
+      </tr>
+      <tr class="total-row">
+        <td colspan="3">TOTAL HT</td>
+        <td>100,00 €</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
