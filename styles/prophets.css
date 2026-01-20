@@ -1,0 +1,41 @@
+body {
+  font-family: "Roboto Mono";
+  margin: 0;
+}
+
+header,
+footer {
+  background-color: rgb(9, 40, 106);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#cards {
+  margin: 10px;
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+#cards section {
+  text-align: center;
+  border: 1px solid #666;
+  border-radius: 10px;
+  background-color: rgb(192, 192, 192);
+  box-shadow: 5px 5px 10px #999;
+  margin-bottom: 10px;
+}
+
+#cards img {
+  display: block;
+  width: 96%;
+  margin: 10px 2%;
+  height: auto;
+  border-radius: 10px;
+}
