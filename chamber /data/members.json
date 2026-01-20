@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Brasserie Nationale d'Haïti S.A. (Prestige)",
+    "address": "Route Nationale #1, Port-au-Prince, Haiti",
+    "phone": "+509 2811 3000",
+    "website": "https://www.brasanh.com",
+    "image": "prestige-brewery.jpg",
+    "membershipLevel": 3,
+    "industry": "Manufacturing & Beverages",
+    "description": "Producer of Haiti's iconic Prestige beer, a major employer and industrial leader."
+  },
+  {
+    "name": "Sogebank",
+    "address": "Angle Rues Clerveaux et Geffrard, Port-au-Prince",
+    "phone": "+509 2813 1000",
+    "website": "https://www.sogebank.com",
+    "image": "sogebank.jpg",
+    "membershipLevel": 3,
+    "industry": "Banking & Finance",
+    "description": "One of Haiti's largest and most prominent commercial banking groups."
+  },
+  {
+    "name": "Électricité d'Haïti (ED'H)",
+    "address": "Rue Oswald Durand, Port-au-Prince",
+    "phone": "+509 2811 4000",
+    "website": "https://www.edh.ht",
+    "image": "edh-power.jpg",
+    "membershipLevel": 2,
+    "industry": "Energy & Utilities",
+    "description": "State-owned public utility responsible for electricity generation and distribution."
+  },
+  {
+    "name": "Caribbean Supermarket (CARIMAX)",
+    "address": "Delmas 31, Port-au-Prince",
+    "phone": "+509 2940 0000",
+    "website": "https://www.carimax.com",
+    "image": "carimax-supermarket.jpg",
+    "membershipLevel": 2,
+    "industry": "Retail & Grocery",
+    "description": "Leading supermarket chain offering a wide range of local and imported goods."
+  },
+  {
+    "name": "Voilà / Natcom",
+    "address": "Delmas 60, Port-au-Prince",
+    "phone": "+509 2811 1111",
+    "website": "https://www.natcom.ht",
+    "image": "natcom-telecom.jpg",
+    "membershipLevel": 3,
+    "industry": "Telecommunications",
+    "description": "Major provider of mobile, fixed-line, and internet services in Haiti."
+  },
+  {
+    "name": "Mupanah Boutique (Musée du Panthéon National)",
+    "address": "Champ de Mars, Port-au-Prince",
+    "phone": "+509 2940 2020",
+    "website": "https://www.mupanah.ht",
+    "image": "mupanah-boutique.jpg",
+    "membershipLevel": 1,
+    "industry": "Arts, Culture & Retail",
+    "description": "Boutique associated with the national museum, selling Haitian art, crafts, and books."
+  },
+  {
+    "name": "Agritrans S.A.",
+    "address": "Trou-du-Nord, Nord-Est Department",
+    "phone": "+509 3701 5555",
+    "website": "https://www.agritrans.ht",
+    "image": "agritrans-farming.jpg",
+    "membershipLevel": 2,
+    "industry": "Agriculture & Agro-Processing",
+    "description": "Pioneering agro-industrial company operating Haiti's largest banana plantation for export."
+  }
+]

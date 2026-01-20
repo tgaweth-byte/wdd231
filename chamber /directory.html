@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Official directory of the Haïti Business Hub & Chamber of Commerce. Connect with trusted Haitian businesses in banking, agriculture, manufacturing, and more.">
+  <meta name="author" content="Gaweth Thalon">
+  <title>Business Directory | Haïti Business Hub & Chamber of Commerce</title>
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:title" content="Discover Haitian Businesses | Haiti Chamber Directory">
+  <meta property="og:description" content="Explore the trusted directory of leading Haitian companies.">
+  <meta property="og:image" content="https://yourusername.github.io/wdd231/chamber/images/social-preview.png">
+  <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon - SIMPLIFIED & CORRECTED -->
+  <link rel="icon" href="images/favicon-2.ico" type="image/x-icon">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+  <!-- Added role="banner" for accessibility -->
+  <header role="banner">
+    <a href="index.html" class="logo-link">
+      <img src="images/ccilogo.jpg" alt="Haiti Business Hub Chamber Logo" width="150" height="75">
+      <div>
+        <h1>Haïti Business Hub</h1>
+        <span>Chamber of Commerce</span>
+      </div>
+    </a>
+    <button id="menu-button" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
+    <!-- Added role="navigation" for accessibility -->
+    <nav id="primary-nav" role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="active" aria-current="page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Added id="main" for skip link navigation -->
+  <main id="main">
+    <h2>Haitian Business Directory</h2>
+    <p class="page-intro">Browse our trusted network of leading Haitian enterprises. Support local growth and find
+      reliable partners.</p>
+
+    <div class="view-toggle" role="group" aria-label="View display options">
+      <button id="grid-view" class="active" aria-pressed="true">
+        <span>Grid View</span>
+      </button>
+      <button id="list-view" aria-pressed="false">
+        <span>List View</span>
+      </button>
+    </div>
+
+    <!-- Added aria-live for dynamic content announcements -->
+    <div id="member-container" class="grid" aria-live="polite">
+      <!-- Content loads from JSON -->
+    </div>
+  </main>
+
+  <!-- Added role="contentinfo" for accessibility -->
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-contact">
+        <h3>Haïti Business Hub & Chamber of Commerce</h3>
+        <p>Place du Marron Inconnu, Champ de Mars<br>Port-au-Prince, HT6110, Haiti</p>
+        <p>📞 <a href="tel:+50928112233">+509 28 11 22 33</a> | ✉️ <a
+            href="mailto:info@haitibusinesshub.ht">info@haitibusinesshub.ht</a></p>
+      </div>
+      <div class="footer-info">
+        <p>&copy; <span id="currentyear"></span> Haiti Business Hub</p>
+        <p><strong>Gaweth Thalon</strong> | WDD 231 Project</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,351 @@
+:root {
+  --primary-blue: #00209F;
+  --secondary-red: #D21034;
+  --accent-gold: #F9D70B;
+  --light-gray: #F8F9FA;
+  --dark-charcoal: #333333;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+/* SIMPLIFIED: Base styles */
+body {
+  font-family: var(--font-body);
+  color: var(--dark-charcoal);
+  background-color: var(--light-gray);
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* SIMPLIFIED: Header */
+header {
+  background-color: white;
+  border-bottom: 4px solid var(--accent-gold);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-link h1 {
+  color: var(--primary-blue);
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  margin: 0;
+}
+
+.logo-link span {
+  color: var(--secondary-red);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* View Toggle - SIMPLIFIED */
+.view-toggle {
+  text-align: center;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.view-toggle button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary-blue);
+  background: white;
+  color: var(--primary-blue);
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-toggle button.active,
+.view-toggle button[aria-pressed="true"] {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* SIMPLIFIED: Grid container */
+#member-container.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* SIMPLIFIED: Member card */
+.member-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 32, 159, 0.1);
+  border-top: 5px solid var(--accent-gold);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 32, 159, 0.15);
+}
+
+/* Membership level borders - SIMPLIFIED */
+.member-card.level-3 {
+  border-top-color: #FFD700 !important;
+  border-top-width: 5px;
+  border-top-style: solid;
+}
+
+.member-card.level-2 {
+  border-top-color: #C0C0C0 !important;
+  border-top-width: 5px;
+  border-top-style: solid;
+}
+
+.member-card.level-1 {
+  border-top-color: #CD7F32 !important;
+  border-top-width: 5px;
+  border-top-style: solid;
+}
+
+.member-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-card h3 {
+  color: var(--primary-blue);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.member-card p {
+  margin: 0.25rem 0;
+  flex: 1;
+}
+
+.member-card .website-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-red);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+/* SIMPLIFIED: List view */
+#member-container.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.member-list-item {
+  background: white;
+  padding: 1.25rem;
+  border-left: 4px solid var(--primary-blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 0 8px 8px 0;
+}
+
+.member-list-item h3 {
+  color: var(--primary-blue);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* SIMPLIFIED: Card image container */
+.card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* SIMPLIFIED: Membership badges */
+.membership-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 10;
+}
+
+/* Couleurs unies par niveau */
+.member-card.level-1 .membership-badge {
+  background-color: #CD7F32;
+  /* Bronze solide */
+  color: white;
+}
+
+.member-card.level-2 .membership-badge {
+  background-color: #C0C0C0;
+  /* Argent solide */
+  color: #333333;
+}
+
+.member-card.level-3 .membership-badge {
+  background-color: #FFD700;
+  /* Or solide */
+  color: #8B7500;
+}
+
+/* SIMPLIFIED: Footer */
+footer {
+  background-color: var(--primary-blue);
+  color: white;
+  margin-top: auto;
+}
+
+.footer-content {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-contact a {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-info {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* SIMPLIFIED: Mobile menu button */
+#menu-button {
+  display: block;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: var(--primary-blue);
+}
+
+/* SIMPLIFIED: Responsive navigation for mobile */
+@media screen and (max-width: 767px) {
+  #primary-nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
+  }
+
+  #primary-nav.active {
+    display: block;
+  }
+
+  #primary-nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  #primary-nav li {
+    margin: 0;
+  }
+
+  #primary-nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  /* Stack header elements on small screens */
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .logo-link {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #menu-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/* SIMPLIFIED: Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: var(--primary-blue);
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* SIMPLIFIED: Error message */
+.error-message {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(210, 16, 52, 0.1);
+  border: 2px solid var(--secondary-red);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.error-message h3 {
+  color: var(--secondary-red);
+  margin-bottom: 1rem;
+}
