@@ -1,20 +1,10 @@
-/**
- * main.js - General utilities for the Chamber of Commerce website
- */
-
-// SIMPLIFIED: Initialize all functionality
+// Initialize site
 function initializeSite() {
-  console.log('Initializing Chamber of Commerce site...');
-
   updateFooterDates();
-  highlightCurrentPage();
   initResponsiveNavigation();
-  enhanceAccessibility();
-
-  console.log('Site initialization complete');
 }
 
-// SIMPLIFIED: Update footer dates
+// Update footer dates
 function updateFooterDates() {
   const yearElement = document.getElementById('currentyear');
   const lastModifiedElement = document.getElementById('lastModified');
@@ -23,17 +13,7 @@ function updateFooterDates() {
   if (lastModifiedElement) lastModifiedElement.textContent = document.lastModified;
 }
 
-// SIMPLIFIED: Highlight current page
-function highlightCurrentPage() {
-  const currentPage = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('#primary-nav a').forEach(link => {
-    const isActive = link.getAttribute('href') === currentPage;
-    link.classList.toggle('active', isActive);
-    link.setAttribute('aria-current', isActive ? 'page' : null);
-  });
-}
-
-// SIMPLIFIED: Responsive navigation
+// Responsive navigation
 function initResponsiveNavigation() {
   const nav = document.getElementById('primary-nav');
   const menuButton = document.getElementById('menu-button');
@@ -46,18 +26,17 @@ function initResponsiveNavigation() {
     nav.classList.toggle('active', !isExpanded);
   };
 
-  // Set initial state based on viewport
   const updateNavVisibility = () => {
     const isMobile = window.innerWidth < 768;
-    menuButton.setAttribute('aria-expanded', !isMobile);
-    nav.classList.toggle('active', !isMobile);
     menuButton.style.display = isMobile ? 'block' : 'none';
+    nav.classList.toggle('active', !isMobile);
+    menuButton.setAttribute('aria-expanded', !isMobile);
   };
 
   menuButton.addEventListener('click', toggleMenu);
   window.addEventListener('resize', updateNavVisibility);
 
-  // Close mobile menu when clicking outside
+  // Close menu when clicking outside on mobile
   document.addEventListener('click', (e) => {
     if (window.innerWidth < 768 &&
       !nav.contains(e.target) &&
@@ -68,11 +47,11 @@ function initResponsiveNavigation() {
   });
 
   updateNavVisibility();
+  addSkipLink();
 }
 
-// SIMPLIFIED: Accessibility improvements
-function enhanceAccessibility() {
-  // Add skip link if not present
+// Add skip link for accessibility
+function addSkipLink() {
   if (!document.querySelector('.skip-link')) {
     const skipLink = document.createElement('a');
     skipLink.href = '#main';
@@ -80,16 +59,6 @@ function enhanceAccessibility() {
     skipLink.textContent = 'Skip to main content';
     document.body.prepend(skipLink);
   }
-
-  // Add ARIA labels to view toggle buttons
-  document.querySelectorAll('.view-toggle button').forEach(button => {
-    if (!button.hasAttribute('aria-label')) {
-      button.setAttribute('aria-label',
-        button.textContent.includes('Grid')
-          ? 'Display members in grid layout'
-          : 'Display members in list layout');
-    }
-  });
 }
 
 // Initialize when DOM is ready

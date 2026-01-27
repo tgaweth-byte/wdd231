@@ -1,117 +1,93 @@
-/**
- * directory.js - Main functionality for the Chamber Directory Page
- */
-
-// SIMPLIFIED: State management
+// State
 const state = {
   view: 'grid',
-  members: [],
-  elements: {
-    container: document.getElementById('member-container'),
-    gridButton: document.getElementById('grid-view'),
-    listButton: document.getElementById('list-view')
-  }
+  members: []
 };
 
-// SIMPLIFIED: Main function using async/await
-async function getMembers() {
+// Membership levels
+const MEMBERSHIP_TEXTS = ['Member', 'Silver Member', 'Gold Member'];
+
+// DOM Elements
+const elements = {
+  container: document.getElementById('member-container'),
+  gridButton: document.getElementById('grid-view'),
+  listButton: document.getElementById('list-view')
+};
+
+// Initialize
+async function initDirectory() {
   try {
-    const response = await fetch('data/members.json');
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
-    state.members = await response.json();
-    displayMembers(state.view);
+    state.members = await loadMembers();
+    displayMembers();
     setupViewToggle();
-
   } catch (error) {
-    state.elements.container.innerHTML = `
-      <div class="error-message">
-        <h3>Unable to Load Directory</h3>
-        <p>We're having trouble loading the business directory. Please try again later.</p>
-      </div>
-    `;
-    state.elements.container.className = 'error';
+    showError();
   }
 }
 
-// SIMPLIFIED: Display members based on current view
+// Load members from JSON
+async function loadMembers() {
+  const response = await fetch('data/members.json');
+  if (!response.ok) throw new Error('Failed to load members');
+  return response.json();
+}
+
+// Display members based on current view
 function displayMembers(view = state.view) {
-  const { container } = state.elements;
-
-  container.innerHTML = '';
-  container.className = view;
   state.view = view;
+  elements.container.className = view;
+  elements.container.innerHTML = state.members.length
+    ? state.members.map(member => view === 'grid' ? createCard(member) : createListItem(member)).join('')
+    : '<p class="no-members">No member data available.</p>';
 
-  if (!state.members.length) {
-    container.innerHTML = '<p class="no-members">No member data available.</p>';
-    return;
-  }
-
-  state.members.forEach(member => {
-    container.appendChild(view === 'grid' ? createCard(member) : createListItem(member));
-  });
-
-  updateActiveButton();
+  updateViewButtons();
 }
 
-// SIMPLIFIED: Create grid card
+// Create member card for grid view
 function createCard(member) {
-  const card = document.createElement('div');
-  card.className = `member-card level-${member.membershipLevel}`;
-  card.innerHTML = `
-    <div class="card-image">
-      <img src="images/${member.image.replace('./images/', '')}" 
-           alt="${member.name}" 
-           loading="lazy"
-           width="400" height="300">
-      <span class="membership-badge">${getMembershipText(member.membershipLevel)}</span>
-    </div>
-    <div class="card-content">
-      <h3>${member.name}</h3>
-      <p class="industry">${member.industry}</p>
-      <p class="address">📍 ${member.address}</p>
-      <p class="phone">📞 ${member.phone}</p>
-      <p class="description">${member.description || 'Leading Haitian business'}</p>
-      <a href="${member.website}" target="_blank" rel="noopener" class="website-link">
-        Visit Website
-      </a>
+  const level = member.membershipLevel;
+  const levelText = MEMBERSHIP_TEXTS[level - 1] || 'Member';
+
+  return `
+    <div class="member-card level-${level}">
+      <div class="card-image">
+        <img src="images/${member.image.replace('./images/', '')}" alt="${member.name}" loading="lazy">
+        <span class="membership-badge">${levelText}</span>
+      </div>
+      <div class="card-content">
+        <h3>${member.name}</h3>
+        <p class="industry">${member.industry}</p>
+        <p class="address">📍 ${member.address}</p>
+        <p class="phone">📞 ${member.phone}</p>
+        <p class="description">${member.description || 'Leading Haitian business'}</p>
+        <a href="${member.website}" target="_blank" rel="noopener" class="website-link">Visit Website</a>
+      </div>
     </div>
   `;
-  return card;
 }
 
-// SIMPLIFIED: Create list item (no images)
+// Create list item for list view
 function createListItem(member) {
-  const item = document.createElement('div');
-  item.className = `member-list-item level-${member.membershipLevel}`;
-  item.innerHTML = `
-    <div class="list-item-content">
-      <h3>${member.name} <span class="list-membership">${getMembershipText(member.membershipLevel)}</span></h3>
-      <p class="list-details">
-        ${member.industry} | ${member.address} | ${member.phone}
-      </p>
+  const levelText = MEMBERSHIP_TEXTS[member.membershipLevel - 1] || 'Member';
+
+  return `
+    <div class="member-list-item level-${member.membershipLevel}">
+      <div class="list-item-content">
+        <h3>${member.name} <span class="list-membership">${levelText}</span></h3>
+        <p class="list-details">${member.industry} | ${member.address} | ${member.phone}</p>
+      </div>
+      <a href="${member.website}" target="_blank" rel="noopener" class="list-website-link">Website →</a>
     </div>
-    <a href="${member.website}" target="_blank" rel="noopener" class="list-website-link">
-      Website →
-    </a>
   `;
-  return item;
 }
 
-// SIMPLIFIED: Get membership level text
-function getMembershipText(level) {
-  return ['Member', 'Silver Member', 'Gold Member'][level - 1] || 'Member';
-}
-
-// SIMPLIFIED: View toggle setup
+// Setup view toggle buttons
 function setupViewToggle() {
-  const { gridButton, listButton } = state.elements;
-
-  gridButton.addEventListener('click', () => displayMembers('grid'));
-  listButton.addEventListener('click', () => displayMembers('list'));
+  elements.gridButton.addEventListener('click', () => displayMembers('grid'));
+  elements.listButton.addEventListener('click', () => displayMembers('list'));
 
   // Keyboard support
-  [gridButton, listButton].forEach(button => {
+  [elements.gridButton, elements.listButton].forEach(button => {
     button.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -121,16 +97,25 @@ function setupViewToggle() {
   });
 }
 
-// SIMPLIFIED: Update active button state
-function updateActiveButton() {
-  const { gridButton, listButton } = state.elements;
+// Update active view button
+function updateViewButtons() {
   const isGrid = state.view === 'grid';
-
-  gridButton.classList.toggle('active', isGrid);
-  gridButton.setAttribute('aria-pressed', isGrid);
-  listButton.classList.toggle('active', !isGrid);
-  listButton.setAttribute('aria-pressed', !isGrid);
+  elements.gridButton.classList.toggle('active', isGrid);
+  elements.gridButton.setAttribute('aria-pressed', isGrid);
+  elements.listButton.classList.toggle('active', !isGrid);
+  elements.listButton.setAttribute('aria-pressed', !isGrid);
 }
 
-// Initialize
-document.addEventListener('DOMContentLoaded', getMembers);
+// Show error message
+function showError() {
+  elements.container.innerHTML = `
+    <div class="error-message">
+      <h3>Unable to Load Directory</h3>
+      <p>We're having trouble loading the business directory. Please try again later.</p>
+    </div>
+  `;
+  elements.container.className = 'error';
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', initDirectory);

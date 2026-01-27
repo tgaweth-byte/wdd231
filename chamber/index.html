@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Directory | Haïti Business Hub & Chamber of Commerce</title>
+  <title>Haïti Business Hub & Chamber of Commerce</title>
   <meta name="description"
     content="Official directory of the Haïti Business Hub & Chamber of Commerce. Connect with trusted Haitian businesses in banking, agriculture, manufacturing, and more.">
   <meta name="author" content="Gaweth Thalon">
@@ -12,9 +12,8 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Haïti Business Hub & Chamber of Commerce">
-  <meta property="og:description"
-    content="Official directory of the Haïti Business Hub & Chamber of Commerce. Connect with trusted Haitian businesses.">
-  <meta property="og:url" content="https://tgaweth-byte.github.io/wdd231/chamber/directory.html">
+  <meta property="og:description" content="Explore the trusted directory of leading Haitian companies">
+  <meta property="og:url" content="https://tgaweth-byte.github.io/wdd231/chamber/index.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://tgaweth-byte.github.io/wdd231/chamber/images/hero-haiti.jpg">
   <meta property="og:type" content="website">
@@ -33,7 +32,8 @@
   <!-- Script Links -->
   <script src="scripts/getdates.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/members.js" defer></script>
+  <script src="scripts/currentweather.js" defer></script>
+  <script src="scripts/spotlight.js" defer></script>
 </head>
 
 <body>
@@ -43,23 +43,45 @@
       <span>Haïti Business Hub</span>
       <div>Chamber of Commerce</div>
     </div>
-    <button id="hamburger" aria-label="hamburger"></button>
+    <button id="hamburger" aria-label="navigation"></button>
   </header>
   <nav id="navbar">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li class="active"><a href="directory.html">Directory</a></li>
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
       <li><a href="join.html">Join</a></li>
       <li><a href="discover.html">Discover</a></li>
     </ul>
   </nav>
   <main>
-    <h1>Directory</h1>
-    <div class="theButtons">
-      <button id="btnGrid" class="active">Grid</button>
-      <button id="btnList">List</button>
+    <div class="hero">
+      <img src="images/hero-haiti.jpg" width="1200" height="350"
+        alt="Panoramic view of Port-au-Prince with business district">
+      <a href="join.html">Join Us</a>
     </div>
-    <div id="members" class="grid"></div>
+    <h1>Home</h1>
+
+    <section class="ew">
+      <div class="events">
+        <h2>Events</h2>
+        <p>🇭🇹 Haitian Independence Day Celebration - January 1, 2026 | Champ de Mars</p>
+        <p>💼 Small Business Workshop - February 15, 2026 | Chamber Headquarters</p>
+        <p>🌍 Export Development Seminar - March 10, 2026 | Online</p>
+      </div>
+      <div class="weather">
+        <h2 id="city">Weather</h2>
+        <div>
+          <img id="weather-icon" src="images/fake.png" alt="weather-icon" width="50" height="50">
+          <span id="report"></span>
+        </div>
+      </div>
+      <div>
+        <h2>Forecast</h2>
+        <span id="forecast"></span>
+      </div>
+    </section>
+
+    <section id="spot"></section>
   </main>
   <footer>
     <section class="address">
