@@ -1,0 +1,192 @@
+/************************** THANK YOU PAGE STYLES **************************/
+.thankyou-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.thankyou-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+  background: linear-gradient(135deg, var(--color-accent), #4a9d54);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+  box-shadow: 0 10px 30px rgba(84, 127, 89, 0.3);
+  animation: scaleIn 0.8s ease-out;
+}
+
+.thankyou-container h1 {
+  color: var(--color-secondary);
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.results-box {
+  background-color: var(--color-mygrey-05);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.results-box h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.info-item strong {
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+}
+
+.info-item span {
+  color: var(--color-mygrey-80);
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 5px;
+  border-left: 3px solid var(--color-accent);
+}
+
+.level-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem !important;
+  border-radius: 20px !important;
+  font-weight: 600;
+  color: white !important;
+  border: none !important;
+}
+
+.level-badge.np {
+  background: linear-gradient(135deg, #6c757d, #5a6268);
+}
+
+.level-badge.bronze {
+  background: linear-gradient(135deg, #CD7F32, #B8732D);
+}
+
+.level-badge.silver {
+  background: linear-gradient(135deg, #C0C0C0, #A8A8A8);
+}
+
+.level-badge.gold {
+  background: linear-gradient(135deg, #FFD700, #FFC700);
+  color: #333 !important;
+}
+
+.next-steps {
+  background: linear-gradient(135deg, var(--color-mygrey-05), var(--color-mygrey-10));
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  text-align: left;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.next-steps h2 {
+  color: var(--color-secondary);
+  margin-top: 0;
+  text-align: center;
+}
+
+.next-steps ol {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  padding-left: 2rem;
+}
+
+.next-steps li {
+  margin: 1rem 0;
+  color: var(--color-mygrey-80);
+  line-height: 1.6;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-secondary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.error-message {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+/************************** RESPONSIVE THANK YOU PAGE **************************/
+@media only screen and (max-width: 42rem) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}

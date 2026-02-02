@@ -4,21 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Directory | Haïti Business Hub & Chamber of Commerce</title>
-  <meta name="description"
-    content="Official directory of the Haïti Business Hub & Chamber of Commerce. Connect with trusted Haitian businesses in banking, agriculture, manufacturing, and more.">
+  <title>Thank You | Haïti Business Hub & Chamber of Commerce</title>
+  <meta name="description" content="Thank you for joining the Haïti Business Hub & Chamber of Commerce">
   <meta name="author" content="Gaweth Thalon">
   <link rel="icon" href="images/favicon-2.ico">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Haïti Business Hub & Chamber of Commerce">
-  <meta property="og:description"
-    content="Official directory of the Haïti Business Hub & Chamber of Commerce. Connect with trusted Haitian businesses.">
-  <meta property="og:url" content="https://tgaweth-byte.github.io/wdd231/chamber/directory.html">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:image" content="https://tgaweth-byte.github.io/wdd231/chamber/images/hero-haiti.jpg">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="wdd231 Haïti Business Hub & Chamber of Commerce - by Gaweth Thalon">
 
   <!-- Styles -->
   <link href="styles/normalize.css" rel="stylesheet">
@@ -28,12 +17,12 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="styles/google-fonts.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Scripts -->
   <script src="scripts/getdates.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/members.js" defer></script>
+  <script src="scripts/thankyou.js" defer></script>
 </head>
 
 <body>
@@ -43,24 +32,41 @@
       <span>Haïti Business Hub</span>
       <div>Chamber of Commerce</div>
     </div>
-    <button id="hamburger" aria-label="hamburger"></button>
+    <button id="hamburger" aria-label="navigation"></button>
   </header>
   <nav id="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li class="active"><a href="directory.html">Directory</a></li>
+      <li><a href="directory.html">Directory</a></li>
       <li><a href="join.html">Join</a></li>
       <li><a href="discover.html">Discover</a></li>
     </ul>
   </nav>
+
   <main>
-    <h1>Directory</h1>
-    <div class="theButtons">
-      <button id="btnGrid" class="active">Grid</button>
-      <button id="btnList">List</button>
+    <div class="thankyou-container">
+      <div class="thankyou-icon">✓</div>
+      <h1>Application Submitted Successfully!</h1>
+
+      <div id="results" class="results-box"></div>
+
+      <div class="next-steps">
+        <h2>What happens next?</h2>
+        <ol>
+          <li>We will review your application within 3-5 business days</li>
+          <li>You will receive a confirmation email at the address provided</li>
+          <li>Our team will contact you to finalize your membership</li>
+          <li>Welcome package will be sent to your organization</li>
+        </ol>
+      </div>
+
+      <div class="action-buttons">
+        <a href="index.html" class="btn-primary">Return to Home</a>
+        <a href="directory.html" class="btn-secondary">View Directory</a>
+      </div>
     </div>
-    <div id="members" class="grid"></div>
   </main>
+
   <footer>
     <section class="address">
       <p>Haïti Business Hub & Chamber of Commerce</p>

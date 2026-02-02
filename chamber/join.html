@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join | Haïti Business Hub & Chamber of Commerce</title>
+  <meta name="description"
+    content="Join the Haïti Business Hub & Chamber of Commerce. Choose from our membership levels and connect with Haiti's leading business community.">
+  <meta name="author" content="Gaweth Thalon">
+  <link rel="icon" href="images/favicon-2.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Join | Haïti Business Hub & Chamber of Commerce">
+  <meta property="og:description" content="Become a member of Haiti's premier business chamber">
+  <meta property="og:url" content="https://tgaweth-byte.github.io/wdd231/chamber/join.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://tgaweth-byte.github.io/wdd231/chamber/images/hero-haiti.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="wdd231 Haïti Business Hub & Chamber of Commerce - by Gaweth Thalon">
+
+  <!-- Styles -->
+  <link href="styles/normalize.css" rel="stylesheet">
+  <link href="styles/base.css" rel="stylesheet">
+  <link href="styles/larger.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <img src="images/ccilogo.jpg" alt="Haiti Business Hub Chamber Logo" width="150" height="75">
+    <div>
+      <span>Haïti Business Hub</span>
+      <div>Chamber of Commerce</div>
+    </div>
+    <button id="hamburger" aria-label="navigation"></button>
+  </header>
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li class="active"><a href="join.html">Join</a></li>
+      <li><a href="discover.html">Discover</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Join Our Chamber</h1>
+
+    <section class="sbs">
+      <div class="form-container">
+        <h2>Membership Application Form</h2>
+        <form method="GET" action="thankyou.html" class="designOne" id="membershipForm">
+          <label>First Name*
+            <input type="text" name="first" required autocomplete="given-name">
+          </label>
+
+          <label>Last Name*
+            <input type="text" name="last" required autocomplete="family-name">
+          </label>
+
+          <label>Email*
+            <input type="email" name="email" required placeholder="johndoe@gmail.com" autocomplete="email">
+          </label>
+
+          <label>Cell Phone*
+            <input type="tel" name="phone" required autocomplete="tel" placeholder="987-555-1234">
+          </label>
+
+          <label>Organization*
+            <input type="text" name="organization" required autocomplete="organization">
+          </label>
+
+          <label>Business Description
+            <textarea name="description" rows="4"></textarea>
+          </label>
+
+          <h3>Membership Level</h3>
+          <label>
+            <input type="radio" name="level" value="np"> Non Profit Membership
+          </label>
+          <label>
+            <input type="radio" name="level" value="bronze" checked> Bronze Membership
+          </label>
+          <label>
+            <input type="radio" name="level" value="silver"> Silver Membership
+          </label>
+          <label>
+            <input type="radio" name="level" value="gold"> Gold Membership
+          </label>
+
+          <input type="submit" value="Apply for Membership">
+          <input type="hidden" name="timestamp" id="timestamp">
+        </form>
+      </div>
+
+      <div class="membership-info">
+        <h2>Membership Levels</h2>
+
+        <aside class="mslvl">
+          <h3>Non Profit Membership</h3>
+          <p>Perfect for non-profit organizations</p>
+          <button id="ml1Btn">Learn More</button>
+        </aside>
+
+        <aside class="mslvl">
+          <h3>Bronze Membership</h3>
+          <p>Great starter package for small businesses</p>
+          <button id="ml2Btn">Learn More</button>
+        </aside>
+
+        <aside class="mslvl">
+          <h3>Silver Membership</h3>
+          <p>Enhanced benefits for growing businesses</p>
+          <button id="ml3Btn">Learn More</button>
+        </aside>
+
+        <aside class="mslvl">
+          <h3>Gold Membership</h3>
+          <p>Premium package with maximum visibility</p>
+          <button id="ml4Btn">Learn More</button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Modal for Membership Details -->
+    <dialog id="mlModal">
+      <div>
+        <h4 id="mltitle"></h4>
+        <button id="closeModal">X</button>
+      </div>
+      <span id="mldetails"></span>
+    </dialog>
+
+    <!-- Success Modal -->
+    <dialog id="successModal" class="success-modal">
+      <div class="success-content">
+        <div class="success-icon">✓</div>
+        <h2>Thank You!</h2>
+        <p>Your membership application has been submitted successfully.</p>
+        <p>We will review your application and contact you soon.</p>
+        <button id="closeSuccess" class="success-btn">Close</button>
+      </div>
+    </dialog>
+  </main>
+
+  <footer>
+    <section class="address">
+      <p>Haïti Business Hub & Chamber of Commerce</p>
+      <p>Place du Marron Inconnu, Champ de Mars</p>
+      <p>Port-au-Prince, HT6110, Haiti</p>
+      <p>info@haitibusinesshub.ht</p>
+      <p>+509 28 11 22 33</p>
+    </section>
+    <section class="social">
+      <a href="#"><img src="images/fb.png.webp" alt="facebook" width="16" height="16"></a>
+      <a href="#"><img src="images/twitter.svg" alt="X" width="16" height="16"></a>
+      <a href="#"><img src="images/instagram.png" alt="instagram" width="16" height="16"></a>
+    </section>
+    <section class="project">
+      <p>WDD231 Chamber Project</p>
+      <p>Gaweth Thalon</p>
+      <p>&copy; <span id="currentyear"></span> • Gaweth Thalon • Haiti</p>
+      <p id="lastModified"></p>
+    </section>
+  </footer>
+</body>
+
+</html>

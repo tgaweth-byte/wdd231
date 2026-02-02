@@ -2,7 +2,6 @@
   --color-primary: #be2b2b;
   --color-secondary: #124272;
   --color-accent: #547f59;
-  /* Greyscale Colors */
   --color-mygrey-00: lab(100% 0 0);
   --color-mygrey-05: lab(95% 0 0);
   --color-mygrey-10: lab(90% 0 0);
@@ -21,16 +20,14 @@
   font-family: "Poppins", sans-serif;
 }
 
-/************************** HEADER **************************/
+/* HEADER */
 header {
   background-color: var(--color-mygrey-05);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 }
 
 header img {
-  display: block;
   padding: 1rem 0.625rem;
   width: 2.5rem;
   height: auto;
@@ -44,12 +41,11 @@ header span:nth-of-type(2) {
   font-size: 0.75rem;
 }
 
-/************************** NAVIGATION **************************/
+/* NAVIGATION */
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  overflow: auto;
 }
 
 nav ul li a {
@@ -58,9 +54,8 @@ nav ul li a {
   padding: 0.75rem;
   display: block;
   text-align: center;
-  font-size: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 nav ul li.active a {
@@ -72,21 +67,16 @@ nav ul li a:hover {
   background-color: var(--color-accent);
 }
 
-/************************** HAMBURGER NAVIGATION **************************/
+/* HAMBURGER */
 button#hamburger {
   position: absolute;
   top: 0;
   right: 0;
   background: none;
   border: none;
-  display: block;
-  padding-bottom: 0.6rem;
   font-size: 3rem;
   color: var(--color-mygrey-60);
-  text-align: center;
-  width: auto;
   cursor: pointer;
-  font-family: "Verdana", sans-serif;
 }
 
 button#hamburger::before {
@@ -97,19 +87,18 @@ button#hamburger.show::before {
   content: "x";
 }
 
-/* Animate open and closed */
 nav {
   background-color: var(--color-mygrey-20);
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 1s ease-out;
+  transition: grid-template-rows 0.5s;
 }
 
 nav.show {
   grid-template-rows: 1fr;
 }
 
-/************************** HERO IMAGE **************************/
+/* HERO */
 .hero {
   position: relative;
 }
@@ -117,7 +106,6 @@ nav.show {
 .hero img {
   width: 100%;
   height: 300px;
-  display: block;
   object-fit: cover;
 }
 
@@ -126,26 +114,23 @@ nav.show {
   bottom: 0.625rem;
   left: 50%;
   transform: translateX(-50%);
-  display: block;
   width: 6.25rem;
   text-align: center;
   color: white;
-  border: solid 1px #000;
+  border: 1px solid #000;
   border-radius: 50px;
   padding: 0.625rem;
   background-color: var(--color-accent);
   text-decoration: none;
-  box-shadow: 0 0 10px var(--color-mygrey-70);
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 
 .hero a:hover {
   background-color: var(--color-primary);
   transform: translateX(-50%) translateY(-2px);
-  box-shadow: 0 0 15px var(--color-mygrey-60);
 }
 
-/************************** MAIN CONTENT **************************/
+/* MAIN */
 main h1 {
   margin: 0.5rem 0.625rem;
   color: var(--color-secondary);
@@ -162,16 +147,7 @@ main p {
   color: #333;
 }
 
-main a {
-  color: #D21034;
-  transition: color 0.3s ease;
-}
-
-main a:hover {
-  color: var(--color-primary);
-}
-
-/************************** EVENTS AND WEATHER **************************/
+/* EVENTS & WEATHER */
 .ew {
   margin: 0.5rem 0.625rem;
 }
@@ -181,7 +157,6 @@ main a:hover {
   border: 1px solid var(--color-mygrey-10);
   margin-bottom: 1rem;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .ew h2 {
@@ -199,38 +174,28 @@ main a:hover {
   padding: 0.625rem;
 }
 
-.weather p {
-  margin: 0.2rem 0;
-  font-size: 0.85rem;
-  color: var(--color-accent);
-}
-
 #forecast p {
   margin: 0.5rem 0.625rem;
-  font-family: Verdana, sans-serif;
   color: var(--color-mygrey-70);
 }
 
-/************************** SPOTLIGHTS **************************/
+/* SPOTLIGHTS */
 #spot div {
   background-color: var(--color-mygrey-05);
   text-align: center;
   border: 1px solid var(--color-mygrey-10);
   border-radius: 10px;
-  overflow: hidden;
   margin: 0.625rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s;
 }
 
 #spot div:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 #spot h2 {
   background-color: var(--color-mygrey-20);
   padding: 0.3rem 0;
-  font-size: 1.1rem;
   color: var(--color-mygrey-80);
 }
 
@@ -242,20 +207,18 @@ main a:hover {
 #spot img {
   width: 100%;
   height: auto;
-  display: block;
 }
 
 #spot a {
   display: block;
   padding: 0.5rem 0;
   margin: 0.5rem 1rem;
-  color: var(--color-mygrey-05);
+  color: white;
   font-weight: 800;
-  font-size: 1.2rem;
   text-decoration: none;
   border-radius: 99px;
   background-color: var(--color-primary);
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 
 #spot a:hover {
@@ -263,9 +226,8 @@ main a:hover {
   transform: scale(1.05);
 }
 
-/************************** DIRECTORY **************************/
+/* DIRECTORY */
 .theButtons {
-  width: 100%;
   text-align: center;
   margin: 1rem 0;
 }
@@ -275,13 +237,9 @@ main a:hover {
   padding: 0.7rem 1rem;
   border-radius: 10px;
   border: 1px solid #666;
-  background-color: transparent;
+  background: transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.theButtons button:hover {
-  background-color: var(--color-mygrey-10);
+  transition: all 0.3s;
 }
 
 .theButtons button.active {
@@ -293,7 +251,6 @@ main a:hover {
   margin: 0 2vw;
 }
 
-/* Grid layout */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -304,16 +261,14 @@ main a:hover {
 .grid section {
   text-align: center;
   margin: 1rem 0;
-  border: solid 1px #aaa;
+  border: 1px solid #aaa;
   background-color: #eee;
   border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s;
 }
 
 .grid section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .grid img:first-child {
@@ -330,18 +285,16 @@ main a:hover {
   margin: 0.2rem 0;
 }
 
-/* List layout */
 .list section {
   display: grid;
   grid-template-columns: repeat(4, auto);
   align-items: center;
   margin: 0.5rem 0;
-  padding: 0.3125rem;
-  border: solid 1px #aaa;
+  padding: 0.3rem;
+  border: 1px solid #aaa;
   background-color: #eee;
   border-radius: 10px;
-  overflow: hidden;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .list section:hover {
@@ -352,49 +305,382 @@ main a:hover {
   display: none;
 }
 
-/************************** MODAL POPUPS **************************/
-.mslvl aside {
-  border: solid 1px #444;
-  border-radius: 5px 20px;
-  padding: 0.625rem;
-  background-color: var(--color-accent);
-  text-align: center;
-  margin-bottom: 1rem;
-  animation: slidein 2s;
+/* JOIN FORM */
+.form-container,
+.membership-info {
+  background-color: var(--color-mygrey-05);
+  padding: 2rem;
+  border-radius: 10px;
 }
 
-.mslvl aside h3 {
+.designOne label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  padding-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.designOne h3 {
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.designOne input[type="text"],
+.designOne input[type="tel"],
+.designOne input[type="email"],
+.designOne textarea {
+  display: block;
+  margin: 0.25rem 0 1rem 0;
+  padding: 0.75rem;
+  border: 2px solid var(--color-mygrey-20);
+  border-radius: 8px;
+  border-left-width: 4px;
+  border-left-color: var(--color-mygrey-40);
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.designOne input:focus,
+.designOne textarea:focus {
+  border-left-color: var(--color-accent);
+  outline: none;
+}
+
+.designOne input:required {
+  border-left-color: var(--color-primary);
+}
+
+.designOne input:required:valid {
+  border-left-color: var(--color-accent);
+}
+
+.designOne input[type="radio"] {
+  width: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.designOne label:has(input[type="radio"]) {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.designOne label:has(input[type="radio"]):hover {
+  background-color: var(--color-mygrey-10);
+}
+
+.designOne textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.designOne input[type="submit"] {
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  background: var(--color-secondary);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.designOne input[type="submit"]:hover {
+  transform: translateY(-2px);
+}
+
+/* MEMBERSHIP LEVELS */
+.membership-info aside {
+  background: var(--color-mygrey-05);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  border-left: 4px solid var(--color-accent);
+  transition: all 0.3s;
+}
+
+.membership-info aside:hover {
+  transform: translateX(5px);
+}
+
+.membership-info aside h3 {
+  color: var(--color-secondary);
+  margin: 0 0 0.5rem 0;
+}
+
+.membership-info aside p {
+  color: var(--color-mygrey-70);
+  margin: 0 0 1rem 0;
+}
+
+.membership-info aside button {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.membership-info aside button:hover {
+  background-color: var(--color-secondary);
+}
+
+/* SUCCESS MODAL */
+.success-modal {
+  border: none;
+  border-radius: 20px;
+  padding: 0;
+  max-width: 500px;
+  width: 90%;
+  background: white;
+}
+
+.success-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.success-content {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
   color: white;
 }
 
-@keyframes slidein {
-  from {
-    opacity: 0;
-    margin-top: 3.125rem;
-    background-color: var(--color-mygrey-05);
-  }
-
-  to {
-    opacity: 1;
-    margin-top: 0;
-    background-color: var(--color-accent);
-  }
+.success-content h2 {
+  color: var(--color-secondary);
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
 }
 
+.success-content p {
+  color: var(--color-mygrey-70);
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.success-btn {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background: var(--color-secondary);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.success-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* THANK YOU PAGE */
+.thankyou-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.thankyou-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+  background: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: white;
+}
+
+.thankyou-container h1 {
+  color: var(--color-secondary);
+  margin-bottom: 2rem;
+}
+
+.results-box {
+  background-color: var(--color-mygrey-05);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+}
+
+.results-box h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.info-item strong {
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+}
+
+.info-item span {
+  color: var(--color-mygrey-80);
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 5px;
+  border-left: 3px solid var(--color-accent);
+}
+
+.level-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem !important;
+  border-radius: 20px !important;
+  font-weight: 600;
+  color: white !important;
+  border: none !important;
+}
+
+.level-badge.np {
+  background: #6c757d;
+}
+
+.level-badge.bronze {
+  background: #CD7F32;
+}
+
+.level-badge.silver {
+  background: #C0C0C0;
+}
+
+.level-badge.gold {
+  background: #FFD700;
+  color: #333 !important;
+}
+
+.next-steps {
+  background: var(--color-mygrey-05);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.next-steps h2 {
+  color: var(--color-secondary);
+  margin-top: 0;
+  text-align: center;
+}
+
+.next-steps ol {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  padding-left: 2rem;
+}
+
+.next-steps li {
+  margin: 1rem 0;
+  color: var(--color-mygrey-80);
+  line-height: 1.6;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-secondary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+/* MODALS */
 #mlModal {
   position: relative;
   border: 2px solid var(--color-primary);
   border-radius: 8px;
   padding: 0.5rem;
   background-color: #eee;
-  box-shadow: 0 0 15px #777;
   width: min(300px, 90vw);
 }
 
 #mlModal div {
   display: grid;
   grid-template-columns: auto 44px;
-  border-bottom: dashed 1px var(--color-mygrey-30);
+  border-bottom: 1px dashed var(--color-mygrey-30);
 }
 
 #mlModal h4 {
@@ -419,14 +705,12 @@ main a:hover {
   border-radius: 8px;
   background-color: var(--color-mygrey-10);
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 
 #mlModal button:hover {
   background-color: var(--color-mygrey-20);
-  transform: scale(1.1);
 }
 
 #mldetails p {
@@ -437,31 +721,31 @@ main a:hover {
   font-weight: 300;
 }
 
-/************************** FOOTER **************************/
+/* FOOTER */
 footer {
   background-color: var(--color-secondary);
   color: var(--color-mygrey-05);
 }
 
 footer section {
-  padding: 2rem 0.625rem;
+  padding: 1rem 1.625rem;
 }
 
 footer .social {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2.5rem;
 }
 
 footer .social a {
-  width: 44px;
-  height: 44px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-  border: 1px solid var(--color-mygrey-05);
+  border: 1.5px solid var(--color-mygrey-05);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 
 footer .social a:hover {

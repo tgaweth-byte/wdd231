@@ -1,0 +1,287 @@
+/************************** JOIN FORM STYLES **************************/
+.form-container {
+  background-color: var(--color-mygrey-05);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.membership-info {
+  background-color: var(--color-mygrey-05);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+form.designOne {
+  margin: 1rem 0;
+}
+
+.designOne label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  padding-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.designOne h3 {
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.designOne input[type="text"],
+.designOne input[type="tel"],
+.designOne input[type="date"],
+.designOne input[type="email"],
+.designOne textarea,
+.designOne select {
+  display: block;
+  margin: 0.25rem 0 1rem 0;
+  padding: 0.75rem;
+  border: 2px solid var(--color-mygrey-20);
+  border-radius: 8px;
+  border-left-width: 4px;
+  border-left-color: var(--color-mygrey-40);
+  font-size: 1rem;
+  color: var(--color-mygrey-100);
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.designOne input:focus,
+.designOne textarea:focus,
+.designOne select:focus {
+  border-left-color: var(--color-accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(84, 127, 89, 0.1);
+}
+
+.designOne input:required {
+  border-left-color: var(--color-primary);
+}
+
+.designOne input:required:valid {
+  border-left-color: var(--color-accent);
+}
+
+.designOne input[type="radio"] {
+  width: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.designOne label:has(input[type="radio"]) {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.designOne label:has(input[type="radio"]):hover {
+  background-color: var(--color-mygrey-10);
+}
+
+.designOne textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.designOne input[type="submit"] {
+  border: none;
+  text-align: center;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 50px;
+  background: var(--color-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.designOne input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.designOne input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/************************** MEMBERSHIP LEVEL CARDS **************************/
+.membership-info aside {
+  background: linear-gradient(135deg, var(--color-mygrey-05), var(--color-mygrey-10));
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  border-left: 4px solid var(--color-accent);
+  transition: all 0.3s ease;
+}
+
+.membership-info aside:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.membership-info aside h3 {
+  color: var(--color-secondary);
+  margin: 0 0 0.5rem 0;
+}
+
+.membership-info aside p {
+  color: var(--color-mygrey-70);
+  margin: 0 0 1rem 0;
+}
+
+.membership-info aside button {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.membership-info aside button:hover {
+  background-color: var(--color-secondary);
+  transform: scale(1.05);
+}
+
+/************************** SUCCESS MODAL **************************/
+.success-modal {
+  border: none;
+  border-radius: 20px;
+  padding: 0;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  animation: slideIn 0.5s ease-out;
+}
+
+.success-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.success-content {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--color-accent), #4a9d54);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  animation: scaleIn 0.6s ease-out 0.2s both;
+  box-shadow: 0 10px 30px rgba(84, 127, 89, 0.3);
+}
+
+.success-content h2 {
+  color: var(--color-secondary);
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.success-content p {
+  color: var(--color-mygrey-70);
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.success-btn {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.success-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/************************** ANIMATIONS **************************/
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/************************** RESPONSIVE JOIN PAGE **************************/
+@media only screen and (max-width: 42rem) {
+  .sbs {
+    display: block;
+  }
+
+  .form-container,
+  .membership-info {
+    margin-bottom: 2rem;
+  }
+
+  .designOne input[type="text"],
+  .designOne input[type="tel"],
+  .designOne input[type="email"],
+  .designOne textarea {
+    max-width: 100%;
+  }
+}
