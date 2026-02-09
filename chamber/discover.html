@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Haiti | Haïti Business Hub & Chamber of Commerce</title>
+  <meta name="description"
+    content="Discover the beauty, culture, and attractions of Haiti. Explore historical sites, natural wonders, and vibrant culture of Port-au-Prince and beyond.">
+  <meta name="author" content="Gaweth Thalon">
+  <link rel="icon" href="images/favicon-2.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Discover Haiti | Haïti Business Hub & Chamber of Commerce">
+  <meta property="og:description" content="Explore Haiti's rich culture, history, and natural beauty">
+  <meta property="og:url" content="https://tgaweth-byte.github.io/wdd231/chamber/discover.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://tgaweth-byte.github.io/wdd231/chamber/images/hero-haiti.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="wdd231 Haïti Business Hub & Chamber of Commerce - by Gaweth Thalon">
+
+  <!-- Styles -->
+  <link href="styles/normalize.css" rel="stylesheet">
+  <link href="styles/base.css" rel="stylesheet">
+  <link href="styles/larger.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/discover.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/discover.js" type="module" defer></script>
+</head>
+
+<body>
+  <header>
+    <img src="images/ccilogo.jpg" alt="Haiti Business Hub Chamber Logo" width="150" height="75">
+    <div>
+      <span>Haïti Business Hub</span>
+      <div>Chamber of Commerce</div>
+    </div>
+    <button id="hamburger" aria-label="navigation"></button>
+  </header>
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li class="active"><a href="discover.html">Discover</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Discover Haiti</h1>
+
+    <!-- Visitor Message -->
+    <div id="visitor-message" class="visitor-message">
+      <p id="visit-text"></p>
+      <button id="close-message" aria-label="Close message">×</button>
+    </div>
+
+    <!-- Attractions Grid -->
+    <div id="attractions-grid" class="attractions-grid"></div>
+  </main>
+
+  <footer>
+    <section class="address">
+      <p>Haïti Business Hub & Chamber of Commerce</p>
+      <p>Place du Marron Inconnu, Champ de Mars</p>
+      <p>Port-au-Prince, HT6110, Haiti</p>
+      <p>info@haitibusinesshub.ht</p>
+      <p>+509 28 11 22 33</p>
+    </section>
+    <section class="social">
+      <a href="#"><img src="images/fb.png.webp" alt="facebook" width="16" height="16"></a>
+      <a href="#"><img src="images/twitter.svg" alt="X" width="16" height="16"></a>
+      <a href="#"><img src="images/instagram.png" alt="instagram" width="16" height="16"></a>
+    </section>
+    <section class="project">
+      <p>WDD231 Chamber Project</p>
+      <p>Gaweth Thalon</p>
+      <p>&copy; <span id="currentyear"></span> • Gaweth Thalon • Haiti</p>
+      <p id="lastModified"></p>
+    </section>
+  </footer>
+</body>
+
+</html>
