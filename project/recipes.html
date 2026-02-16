@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse our complete collection of authentic Haitian recipes including griot, soup joumou, diri ak djon djon, and more traditional dishes.">
+    <meta name="author" content="Haitian Cuisine Heritage">
+    <meta property="og:title" content="Haitian Recipes - Traditional Dishes & Cooking">
+    <meta property="og:description"
+        content="Complete collection of authentic Haitian recipes with detailed instructions and cultural context.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/og-image.jpg">
+    <title>Traditional Haitian Recipes - Haitian Cuisine Heritage</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Haitian Cuisine Heritage</h1>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html" class="active">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Traditional Haitian Recipes</h2>
+                <p>Explore our complete collection of authentic dishes</p>
+            </div>
+        </section>
+
+        <section class="recipes-section">
+            <div class="container">
+                <div class="filter-controls">
+                    <label for="categoryFilter">Filter by Category:</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="Street Food">Street Food</option>
+                        <option value="Holiday Dishes">Holiday Dishes</option>
+                        <option value="Everyday Meals">Everyday Meals</option>
+                        <option value="Desserts">Desserts</option>
+                    </select>
+
+                    <label for="difficultyFilter">Filter by Difficulty:</label>
+                    <select id="difficultyFilter">
+                        <option value="all">All Levels</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+
+                    <button id="resetFilters" class="secondary-button">Reset Filters</button>
+                </div>
+
+                <div class="recipe-count">
+                    <p>Showing <span id="recipeCount">0</span> recipes</p>
+                </div>
+
+                <div id="recipesGrid" class="dish-grid">
+                    <!-- Recipes will be dynamically loaded here -->
+                </div>
+
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p>No recipes found matching your filters. Try adjusting your selection.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Preserving and celebrating Haitian culinary traditions for future generations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#video-demo">Video Demonstration</a></li>
+                    <li><a href="attributions.html">Image Credits</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>Share your family recipes and culinary stories with us.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Haitian Cuisine Heritage. All rights reserved.</p>
+            <p><a href="#video-demo" id="videoLink">Project Video Demonstration</a></p>
+        </div>
+    </footer>
+
+    <!-- Modal Dialog -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div id="modalBody">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/recipes.js" defer></script>
+</body>
+
+</html>

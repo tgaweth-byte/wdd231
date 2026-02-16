@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Haitian Cuisine Heritage to share your family recipes, culinary stories, or ask questions about traditional Haitian cooking.">
+    <meta name="author" content="Haitian Cuisine Heritage">
+    <meta property="og:title" content="Contact Us - Haitian Cuisine Heritage">
+    <meta property="og:description"
+        content="Share your family recipes and connect with our community dedicated to preserving Haitian culinary traditions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/og-image.jpg">
+    <title>Contact Us - Haitian Cuisine Heritage</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Haitian Cuisine Heritage</h1>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h2>Share Your Story</h2>
+                <p>We'd love to hear from you! Share your family recipes, culinary memories, or ask questions about
+                    Haitian cuisine.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>Haitian cuisine is a living tradition, passed down through families and communities. We
+                            welcome your contributions to help preserve these culinary treasures.</p>
+
+                        <div class="info-block">
+                            <h4>What You Can Share:</h4>
+                            <ul>
+                                <li>Family recipes passed down through generations</li>
+                                <li>Personal stories about traditional dishes</li>
+                                <li>Questions about Haitian cooking techniques</li>
+                                <li>Suggestions for recipes you'd like to see</li>
+                                <li>Cultural insights and cooking tips</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-block">
+                            <h4>Response Time</h4>
+                            <p>We typically respond within 2-3 business days. For recipe submissions, we may take
+                                additional time to review and verify authenticity.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form id="contactForm" action="thank-you.html" method="get">
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" name="fullName" required minlength="2"
+                                    placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required
+                                    placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}"
+                                    placeholder="1234567890 (optional)">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="Recipe Submission">Recipe Submission</option>
+                                    <option value="Question">Question about Haitian Cuisine</option>
+                                    <option value="Story">Share a Culinary Story</option>
+                                    <option value="Suggestion">Recipe Suggestion</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="connection">Connection to Haitian Cuisine</label>
+                                <select id="connection" name="connection">
+                                    <option value="">Select an option</option>
+                                    <option value="Haitian Heritage">I have Haitian heritage</option>
+                                    <option value="Family Connection">Family connection to Haiti</option>
+                                    <option value="Food Enthusiast">Food enthusiast/researcher</option>
+                                    <option value="Chef">Professional chef</option>
+                                    <option value="Student">Culinary student</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" required rows="6" minlength="10"
+                                    placeholder="Share your recipe, story, question, or suggestion..."></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                                <label for="newsletter">I'd like to receive updates about new recipes and culinary
+                                    stories</label>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="cta-button">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Preserving and celebrating Haitian culinary traditions for future generations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#video-demo">Video Demonstration</a></li>
+                    <li><a href="attributions.html">Image Credits</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>Share your family recipes and culinary stories with us.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Haitian Cuisine Heritage. All rights reserved.</p>
+            <p><a href="#video-demo" id="videoLink">Project Video Demonstration</a></p>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/contact.js" defer></script>
+</body>
+
+</html>

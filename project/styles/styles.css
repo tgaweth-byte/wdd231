@@ -1,0 +1,246 @@
+/* styles/styles.css - Styles principaux du site */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary-red: #D62828;
+    --deep-blue: #003049;
+    --sunset-orange: #F77F00;
+    --golden-yellow: #FCBF49;
+    --cream: #EAE2B7;
+    --charcoal: #2C2C2C;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--charcoal);
+    background-color: var(--cream);
+}
+
+header {
+    background-color: var(--deep-blue);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--golden-yellow);
+    font-size: 1.8rem;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: white;
+    transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--golden-yellow);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--deep-blue);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    nav.active {
+        max-height: 400px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Grille des recettes */
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Cartes recette */
+.dish-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.dish-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.dish-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.dish-content {
+    padding: 1.25rem;
+}
+
+.dish-category {
+    font-size: 0.9rem;
+    color: var(--sunset-orange);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    max-width: 90%;
+    width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    position: relative;
+    padding: 2rem;
+}
+
+/* Merci / thank-you */
+.submission-details-list {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.submission-details-list dt {
+    font-weight: 600;
+    color: var(--deep-blue);
+}
+
+.submission-details-list dd {
+    margin-left: 0;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--sunset-orange);
+}
+
+/* Footer */
+footer {
+    background: var(--deep-blue);
+    color: white;
+    padding: 3rem 1rem 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    color: var(--golden-yellow);
+    margin-bottom: 1rem;
+}
+
+.footer-section a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: var(--golden-yellow);
+}

@@ -1,0 +1,350 @@
+[
+  {
+    "id": 1,
+    "name": "Griot",
+    "category": "Everyday Meals",
+    "description": "Marinated pork chunks that are boiled until tender, then fried to achieve a perfectly crispy exterior while maintaining juicy, flavorful meat inside.",
+    "prepTime": "4 hours (including marinating)",
+    "cookTime": "45 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "pork shoulder",
+      "sour orange juice",
+      "garlic",
+      "epis",
+      "scotch bonnet pepper",
+      "oil"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1603360943739-9c866a0c769b?w=800&q=80",
+    "cultural": "Griot is one of Haiti's most beloved dishes, often served at celebrations and family gatherings. It represents the fusion of African and French cooking techniques."
+  },
+  {
+    "id": 2,
+    "name": "Soup Joumou",
+    "category": "Holiday Dishes",
+    "description": "A hearty pumpkin soup traditionally served on January 1st to commemorate Haitian Independence Day. This soup symbolizes freedom and resilience.",
+    "prepTime": "30 minutes",
+    "cookTime": "2 hours",
+    "servings": 8,
+    "difficulty": "Medium",
+    "ingredients": [
+      "calabaza squash",
+      "beef",
+      "vegetables",
+      "pasta",
+      "lime juice",
+      "epis"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1574651351983-7054db8f5c35?w=800&q=80",
+    "cultural": "This soup was once forbidden to enslaved people and is now eaten every New Year's Day as a symbol of independence and freedom."
+  },
+  {
+    "id": 3,
+    "name": "Diri ak Djon Djon",
+    "category": "Everyday Meals",
+    "description": "Black mushroom rice with a distinctive earthy flavor and dark color from indigenous Haitian mushrooms. A true delicacy of Haitian cuisine.",
+    "prepTime": "20 minutes",
+    "cookTime": "40 minutes",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "rice",
+      "djon djon mushrooms",
+      "shrimp",
+      "peas",
+      "garlic",
+      "thyme",
+      "butter"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1604902390427-41d37c3c0e29?w=800&q=80",
+    "cultural": "Djon djon mushrooms are unique to Haiti and give this rice its signature black color and umami-rich flavor. Often served at weddings and special occasions."
+  },
+  {
+    "id": 4,
+    "name": "Tasso",
+    "category": "Street Food",
+    "description": "Spicy fried turkey or goat meat, marinated in citrus and Haitian spices, then deep-fried until crispy. A popular street food snack.",
+    "prepTime": "3 hours (including marinating)",
+    "cookTime": "30 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "turkey or goat",
+      "lime juice",
+      "scotch bonnet",
+      "garlic",
+      "epis",
+      "oil"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1626645735327-2c59a2008d54?w=800&q=80",
+    "cultural": "Tasso is a beloved street food often enjoyed with pikliz and fried plantains. It's especially popular during Carnival season."
+  },
+  {
+    "id": 5,
+    "name": "Pikliz",
+    "category": "Everyday Meals",
+    "description": "Spicy pickled vegetable relish made with cabbage, carrots, peppers, and scotch bonnet. The essential condiment for nearly every Haitian meal.",
+    "prepTime": "15 minutes",
+    "cookTime": "0 minutes",
+    "servings": 12,
+    "difficulty": "Easy",
+    "ingredients": [
+      "cabbage",
+      "carrots",
+      "scotch bonnet peppers",
+      "white vinegar",
+      "lime juice",
+      "garlic",
+      "shallots"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1596047397435-3c9d0c1b8f2b?w=800&q=80",
+    "cultural": "No Haitian table is complete without pikliz. This fiery condiment adds heat and tang to griot, tasso, and rice dishes."
+  },
+  {
+    "id": 6,
+    "name": "Lambi",
+    "category": "Holiday Dishes",
+    "description": "Conch cooked in a rich Creole sauce with tomatoes, peppers, and aromatic spices. A luxurious dish for special occasions.",
+    "prepTime": "45 minutes",
+    "cookTime": "2 hours",
+    "servings": 6,
+    "difficulty": "Hard",
+    "ingredients": [
+      "conch",
+      "tomatoes",
+      "bell peppers",
+      "scotch bonnet",
+      "lime juice",
+      "epis",
+      "thyme"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1625937286074-3140e9c6b10d?w=800&q=80",
+    "cultural": "Lambi is considered a delicacy in Haiti and is often served at weddings, holidays, and important celebrations."
+  },
+  {
+    "id": 7,
+    "name": "Accra",
+    "category": "Street Food",
+    "description": "Crispy saltfish fritters made with salted cod, flour, and aromatic herbs. A popular appetizer and street food snack.",
+    "prepTime": "30 minutes (plus soaking)",
+    "cookTime": "15 minutes",
+    "servings": 8,
+    "difficulty": "Medium",
+    "ingredients": [
+      "salted cod",
+      "flour",
+      "onions",
+      "scallions",
+      "garlic",
+      "thyme",
+      "oil"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1563806759611-23d3d3e1e58e?w=800&q=80",
+    "cultural": "Accra is a favorite street food and party appetizer throughout Haiti."
+  },
+  {
+    "id": 12,
+    "name": "Diri Kole ak Pwa",
+    "category": "Everyday Meals",
+    "description": "Rice and beans cooked together with coconut milk and spices. The quintessential Haitian staple served daily in most homes.",
+    "prepTime": "15 minutes",
+    "cookTime": "45 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "rice",
+      "red kidney beans",
+      "coconut milk",
+      "epis",
+      "thyme",
+      "garlic",
+      "scallions"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1623590771831-4d2052db36f7?w=800&q=80",
+    "cultural": "This dish is the backbone of Haitian cuisine, eaten almost daily and representing home cooking at its finest."
+  },
+  {
+    "id": 8,
+    "name": "Legim",
+    "category": "Everyday Meals",
+    "description": "A hearty vegetable stew with eggplant, cabbage, carrots, and spinach, often cooked with beef or crab.",
+    "prepTime": "20 minutes",
+    "cookTime": "45 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "eggplant",
+      "cabbage",
+      "carrots",
+      "spinach",
+      "beef",
+      "epis"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1606890737304-3312e97946b4?w=800&q=80",
+    "cultural": "Legim represents Haiti's agricultural abundance and is a staple in many households."
+  },
+  {
+    "id": 9,
+    "name": "Poulet aux Noix",
+    "category": "Holiday Dishes",
+    "description": "Chicken in rich cashew sauce, a festive dish for celebrations.",
+    "prepTime": "30 minutes",
+    "cookTime": "1 hour",
+    "servings": 6,
+    "difficulty": "Medium",
+    "ingredients": [
+      "chicken",
+      "cashews",
+      "cream",
+      "garlic",
+      "thyme"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1603360943739-9c866a0c769b?w=800&q=80",
+    "cultural": "Reflects French influence in Haitian cuisine."
+  },
+  {
+    "id": 10,
+    "name": "Mayi Moulin",
+    "category": "Everyday Meals",
+    "description": "Creamy cornmeal with beans, a hearty breakfast staple.",
+    "prepTime": "10 minutes",
+    "cookTime": "30 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "cornmeal",
+      "red beans",
+      "coconut milk",
+      "butter"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1625937323184-21d1d7c50d3f?w=800&q=80",
+    "cultural": "A comfort food showcasing Haiti's corn heritage."
+  },
+  {
+    "id": 11,
+    "name": "Bannann Peze",
+    "category": "Street Food",
+    "description": "Twice-fried flattened plantains, crispy and soft.",
+    "prepTime": "10 minutes",
+    "cookTime": "15 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "green plantains",
+      "oil",
+      "salt"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1596043819764-35f949f2d57c?w=800&q=80",
+    "cultural": "Ubiquitous accompaniment to main dishes."
+  },
+  {
+    "id": 13,
+    "name": "Paté Kòde",
+    "category": "Street Food",
+    "description": "Savory fried pastries filled with meat or vegetables.",
+    "prepTime": "45 minutes",
+    "cookTime": "20 minutes",
+    "servings": 10,
+    "difficulty": "Medium",
+    "ingredients": [
+      "flour",
+      "butter",
+      "ground beef",
+      "onions",
+      "peppers"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1574783590805-7a846e6d5e4a?w=800&q=80",
+    "cultural": "Breakfast tradition sold by street vendors."
+  },
+  {
+    "id": 14,
+    "name": "Bouyon",
+    "category": "Everyday Meals",
+    "description": "Hearty beef soup with root vegetables and dumplings.",
+    "prepTime": "30 minutes",
+    "cookTime": "2 hours",
+    "servings": 8,
+    "difficulty": "Medium",
+    "ingredients": [
+      "beef",
+      "yams",
+      "plantains",
+      "dumplings",
+      "epis"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1547595628-7c2d948b1a62?w=800&q=80",
+    "cultural": "Saturday soup day tradition in Haiti."
+  },
+  {
+    "id": 15,
+    "name": "Pen Patat",
+    "category": "Desserts",
+    "description": "Sweet potato bread pudding with coconut and spices.",
+    "prepTime": "30 minutes",
+    "cookTime": "1 hour",
+    "servings": 12,
+    "difficulty": "Medium",
+    "ingredients": [
+      "sweet potatoes",
+      "coconut milk",
+      "sugar",
+      "cinnamon"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1633476114501-6e6e3e65e2f2?w=800&q=80",
+    "cultural": "Traditional holiday dessert."
+  },
+  {
+    "id": 16,
+    "name": "Doukounou",
+    "category": "Desserts",
+    "description": "Sweet cornmeal cake steamed in banana leaves.",
+    "prepTime": "40 minutes",
+    "cookTime": "1 hour",
+    "servings": 10,
+    "difficulty": "Medium",
+    "ingredients": [
+      "cornmeal",
+      "coconut milk",
+      "banana leaves",
+      "vanilla"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1606890737304-3312e97946b4?w=800&q=80",
+    "cultural": "Unique texture from banana leaf wrapping."
+  },
+  {
+    "id": 17,
+    "name": "Tonmtonm",
+    "category": "Everyday Meals",
+    "description": "Mashed breadfruit with okra sauce.",
+    "prepTime": "20 minutes",
+    "cookTime": "40 minutes",
+    "servings": 4,
+    "difficulty": "Easy",
+    "ingredients": [
+      "breadfruit",
+      "okra",
+      "crab",
+      "epis"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1592417817095-8c8c8c8f8e6f?w=800&q=80",
+    "cultural": "Highlights indigenous Caribbean ingredients."
+  },
+  {
+    "id": 18,
+    "name": "Pistache",
+    "category": "Street Food",
+    "description": "Roasted peanuts seasoned with spices.",
+    "prepTime": "5 minutes",
+    "cookTime": "20 minutes",
+    "servings": 6,
+    "difficulty": "Easy",
+    "ingredients": [
+      "raw peanuts",
+      "salt",
+      "garlic powder"
+    ],
+    "mainImage": "https://images.unsplash.com/photo-1574783590805-7a846e6d5e4a?w=800&q=80",
+    "cultural": "Ubiquitous street snack throughout Haiti."
+  }
+]

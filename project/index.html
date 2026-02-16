@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover authentic Haitian cuisine with traditional recipes, cultural heritage, and the rich flavors of Caribbean cooking.">
+    <meta name="author" content="Haitian Cuisine Heritage">
+    <meta property="og:title" content="Haitian Cuisine Heritage - Traditional Recipes & Culture">
+    <meta property="og:description"
+        content="Explore authentic Haitian dishes, their cultural significance, and traditional recipes passed down through generations.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/og-image.jpg">
+    <title>Haitian Cuisine Heritage - Authentic Traditional Recipes</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Haitian Cuisine Heritage</h1>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Discover the Rich Flavors of Haiti</h2>
+                <p>Explore authentic recipes and culinary traditions passed down through generations</p>
+                <a href="recipes.html" class="cta-button">Explore Recipes</a>
+            </div>
+        </section>
+
+        <section class="intro">
+            <div class="container">
+                <h2>Welcome to Haitian Cuisine Heritage</h2>
+                <p>Haitian cuisine is a vibrant tapestry of flavors, reflecting the island's rich history and diverse
+                    cultural influences. From African roots to French refinement and indigenous Taíno ingredients, our
+                    culinary traditions tell the story of resilience, creativity, and celebration.</p>
+                <p>This website serves as a comprehensive resource for authentic Haitian recipes, cooking techniques,
+                    and the cultural significance behind each dish. Whether you're reconnecting with your heritage or
+                    discovering Caribbean cuisine for the first time, we invite you to explore the depth and complexity
+                    of Haitian gastronomy.</p>
+            </div>
+        </section>
+
+        <section class="featured-dishes">
+            <div class="container">
+                <h2>Featured Traditional Dishes</h2>
+                <div id="featuredDishes" class="dish-grid">
+                    <!-- Dishes will be dynamically loaded here -->
+                </div>
+                <div class="view-all">
+                    <a href="recipes.html" class="secondary-button">View All Recipes</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2>Explore by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card" data-category="Street Food">
+                        <h3>Street Food</h3>
+                        <p>Discover popular Haitian street snacks and quick bites</p>
+                    </div>
+                    <div class="category-card" data-category="Holiday Dishes">
+                        <h3>Holiday Dishes</h3>
+                        <p>Special recipes for celebrations and ceremonies</p>
+                    </div>
+                    <div class="category-card" data-category="Everyday Meals">
+                        <h3>Everyday Meals</h3>
+                        <p>Staple dishes enjoyed in Haitian homes daily</p>
+                    </div>
+                    <div class="category-card" data-category="Desserts">
+                        <h3>Desserts</h3>
+                        <p>Sweet treats and traditional Haitian desserts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cultural-info">
+            <div class="container">
+                <h2>Our Culinary Heritage</h2>
+                <div class="heritage-grid">
+                    <div class="heritage-item">
+                        <h3>African Influence</h3>
+                        <p>The backbone of Haitian cuisine comes from West African cooking techniques, including the use
+                            of okra, plantains, and one-pot cooking methods that create rich, layered flavors.</p>
+                    </div>
+                    <div class="heritage-item">
+                        <h3>French Refinement</h3>
+                        <p>French colonial influence brought refined cooking techniques, pastries, and sauces that
+                            merged with local ingredients to create unique Haitian-French fusion dishes.</p>
+                    </div>
+                    <div class="heritage-item">
+                        <h3>Taíno Roots</h3>
+                        <p>Indigenous Taíno people contributed essential ingredients like cassava, sweet potatoes, and
+                            local peppers that remain fundamental to Haitian cooking today.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Preserving and celebrating Haitian culinary traditions for future generations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="attributions.html">Attributions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#video-demo">Video Demonstration</a></li>
+                    <li><a href="attributions.html">Image Credits</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>Share your family recipes and culinary stories with us.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Haitian Cuisine Heritage. All rights reserved.</p>
+            <p><a href="#video-demo" id="videoLink">Project Video Demonstration</a></p>
+        </div>
+    </footer>
+
+    <!-- Modal Dialog -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div id="modalBody">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/main.js" defer></script>
+</body>
+
+</html>
