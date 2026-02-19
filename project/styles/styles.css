@@ -244,3 +244,86 @@ footer {
 .footer-section a:hover {
     color: var(--golden-yellow);
 }
+
+/* === ADDED FOR DYNAMIC CONTENT & PERFECT DESIGN === */
+.hero {
+    background: linear-gradient(rgba(0, 48, 73, 0.8), rgba(0, 48, 73, 0.8)), url('https://images.unsplash.com/photo-1606491956689-2ea866880c84') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 140px 20px;
+}
+
+.page-header {
+    background: var(--deep-blue);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.contact-content,
+.thank-you-content {
+    display: grid;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dish-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--deep-blue);
+}
+
+.dish-meta span {
+    background: var(--cream);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 1rem;
+    font-size: 1.1rem;
+    color: var(--deep-blue);
+}
+
+/* Modal */
+.modal-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    background: var(--light-gray);
+    padding: 1.25rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+}
+
+.modal-details div {
+    font-size: 0.95rem;
+}
+
+.submission-details-list {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.submission-details-list dd {
+    padding: 0.75rem 1rem;
+    background: var(--cream);
+    border-left: 5px solid var(--sunset-orange);
+    border-radius: 0 6px 6px 0;
+}
